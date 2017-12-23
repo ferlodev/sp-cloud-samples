@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demogateway
+
+zuul:
+  routes:
+    demotransactions:
+      path: /transaction/save
+      url: http://localhost:8082/
+
+ribbon:
+  eureka:
+    enabled: true

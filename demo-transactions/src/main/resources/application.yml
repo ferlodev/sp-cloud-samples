@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: transactions
+  cloud:
+    config:
+      failFast: true
+management:
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    hostname: server1
+  client:
+    serviceUrl:
+      defaultZone: http://server1:8086/eureka/
+ 
